@@ -80,3 +80,11 @@ p {
     color: #666;
     font-size: 16px;
 }
+/* Existing styles ... */
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 200px; /* Adjust the width as needed */
+    height: auto;
+}
