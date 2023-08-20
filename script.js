@@ -12,8 +12,22 @@ function calculateBMR() {
       bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
     }
   
-    // Store data in localStorage or pass it to the next page using query parameters
-    // For simplicity, let's just alert the calculated BMR for now
-    alert(`Your Basal Metabolic Rate (BMR) is: ${bmr.toFixed(2)}`);
+    // Open a new window with the calculated BMR value
+    const newWindow = window.open('', '_blank');
+    newWindow.document.write(`
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <title>Calculated BMR</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+      </head>
+      <body>
+        <div class="container">
+          <h1>Calculated BMR</h1>
+          <p>Your Basal Metabolic Rate (BMR) is: ${bmr.toFixed(2)}</p>
+        </div>
+      </body>
+      </html>
+    `);
   }
   
