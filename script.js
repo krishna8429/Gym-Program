@@ -1,21 +1,34 @@
-function calculateBMR() {
-    const age = parseFloat(document.getElementById('age').value);
-    const height = parseFloat(document.getElementById('height').value);
-    const weight = parseFloat(document.getElementById('weight').value);
-    const gender = document.getElementById('gender').value;
-  
-    let bmr;
-  
-    if (gender === 'male') {
-      bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
-    } else if (gender === 'female') {
-      bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
-    }
-  
-    // Store the calculated BMR in local storage
-    localStorage.setItem('calculatedBMR', bmr.toFixed(2));
-  
-    // Redirect to the calculate.html page
-    window.location.href = 'calculate.html';
+document.getElementById("calculateBtn").addEventListener("click", function() {
+  const age = parseInt(document.getElementById("age").value);
+  const height = parseInt(document.getElementById("height").value);
+  const weight = parseInt(document.getElementById("weight").value);
+  const gender = document.getElementById("gender").value;
+  const activityLevel = document.getElementById("activity").value;
+
+  let caloriesIntake;
+
+  // Calculate calories based on gender and activity level
+  if (gender === "male") {
+      if (activityLevel === "not-active") {
+          caloriesIntake = 1.2 * (66 + (13.75 * weight) + (5.003 * height) - (6.75 * age));
+      } else if (activityLevel === "active") {
+          caloriesIntake = 1.375 * (66 + (13.75 * weight) + (5.003 * height) - (6.75 * age));
+      } else if (activityLevel === "very-active") {
+          caloriesIntake = 1.55 * (66 + (13.75 * weight) + (5.003 * height) - (6.75 * age));
+      }
+  } else if (gender === "female") {
+      if (activityLevel === "not-active") {
+          caloriesIntake = 1.2 * (655 + (9.563 * weight) + (1.850 * height) - (4.676 * age));
+      } else if (activityLevel === "active") {
+          caloriesIntake = 1.375 * (655 + (9.563 * weight) + (1.850 * height) - (4.676 * age));
+      } else if (activityLevel === "very-active") {
+          caloriesIntake = 1.55 * (655 + (9.563 * weight) + (1.850 * height) - (4.676 * age));
+      }
   }
-  
+
+  // Display the result
+  const resultContainer = document.createElement("div");
+  resultContainer.innerHTML = `<p>Your estimated daily calories intake: <strong>${caloriesIntake.toFixed(2)} calories</strong></p>`;
+  document.getElementById("calculator-form").appendChild(resultContainer);
+});
+

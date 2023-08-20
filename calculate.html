@@ -1,19 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculated BMR</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
+    <title>Calorie Intake Calculator</title>
+    <script>
+        function calculateCalories() {
+            var activityLevel = document.getElementById("activityLevel").value;
+            var baseCalories = 1500; // Replace with appropriate base calories
+
+            if (activityLevel === "inactive") {
+                baseCalories *= 1.2;
+            } else if (activityLevel === "active") {
+                baseCalories *= 1.5;
+            } else if (activityLevel === "veryactive") {
+                baseCalories *= 1.8;
+            }
+
+            document.getElementById("caloriesOutput").innerHTML = "Your estimated daily calorie intake: " + baseCalories.toFixed(2) + " calories";
+        }
+    </script>
 </head>
 <body>
-  <div class="container">
-    <h1>Calculated BMR</h1>
-    <p>Your Basal Metabolic Rate (BMR) is: <span id="calculatedBMR"></span></p>
-    <button id="enterGoalButton">Enter Your Goal</button>
-    <a href="goal.html"><img src="file:///C:/Users/krishna/Desktop/college%20project/animage.webp"></a>
-  </div>
-  <script src="calculate.js"></script>
+    <h1>Calorie Intake Calculator</h1>
+    <form>
+        <label for="activityLevel">Select your activity level:</label>
+        <select id="activityLevel">
+            <option value="inactive">Inactive</option>
+            <option value="active">Active</option>
+            <option value="veryactive">Very Active</option>
+        </select>
+        <br>
+        <button type="button" onclick="calculateCalories()">Calculate</button>
+    </form>
+    <p id="caloriesOutput"></p>
+    <a href="goal.html">
+      <button>SUBMIT</button>
+    </a>
 </body>
 </html>
 
+         
