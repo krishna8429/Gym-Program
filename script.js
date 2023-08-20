@@ -13,8 +13,12 @@ function calculateBMR() {
     }
   
     // Open a new window with the calculated BMR value
-    const newWindow = window.open('', '_blank');
-    newWindow.document.write(`
+    <button id="loadPageButton">Load page</button>
+    <script>
+        document.getElementById("loadPageButton").addEventListener("click",function(){
+            window.location.href = "calculate.html";
+        });
+    </script>
       <!DOCTYPE html>
       <html>
       <head>
