@@ -12,26 +12,10 @@ function calculateBMR() {
       bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
     }
   
-    // Open a new window with the calculated BMR value
-    <button id="loadPageButton">Load page</button>
-    <script>
-        document.getElementById("loadPageButton").addEventListener("click",function(){
-            window.location.href = "calculate.html";
-        });
-    </script>
-      <!DOCTYPE html>
-      <html>
-      <head>
-        <title>Calculated BMR</title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-      </head>
-      <body>
-        <div class="container">
-          <h1>Calculated BMR</h1>
-          <p>Your Basal Metabolic Rate (BMR) is: ${bmr.toFixed(2)}</p>
-        </div>
-      </body>
-      </html>
-    `);
+    // Store the calculated BMR in local storage
+    localStorage.setItem('calculatedBMR', bmr.toFixed(2));
+  
+    // Redirect to the calculate.html page
+    window.location.href = 'calculate.html';
   }
   
