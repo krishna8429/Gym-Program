@@ -9,7 +9,7 @@ body {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white background */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
@@ -38,6 +38,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    background-color: #f9f9f9; /* Light gray background for input fields */
   }
   
   button {
@@ -63,5 +64,6 @@ body {
   body {
     background: url('background-image.jpg') no-repeat center center fixed;
     background-size: cover;
+    background-color: #f0f0f0; /* Fallback background color */
   }
   
