@@ -2,37 +2,36 @@
 <html>
 <head>
   <link rel="stylesheet" href="style.css">
-    <title>Calorie Intake Calculator</title>
+    <title>Workout Plan Generator</title>
+    <script src="workout.js"></script>
     <script>
-        function calculateCalories() {
-            var activityLevel = document.getElementById("activityLevel").value;
-            var baseCalories = 1500; // Replace with appropriate base calories
-
-            if (activityLevel === "inactive") {
-                baseCalories *= 1.2;
-            } else if (activityLevel === "active") {
-                baseCalories *= 1.5;
-            } else if (activityLevel === "veryactive") {
-                baseCalories *= 1.8;
+        function calculateWorkout() {
+            var goal = document.getElementById("goal").value;
+            
+            if (goal === "weightloss") {
+                generateWorkout("weightloss");
+            } else if (goal === "musclegain") {
+                generateWorkout("musclegain");
+            } else if (goal === "maintenance") {
+                generateWorkout("maintenance");
             }
-
-            document.getElementById("caloriesOutput").innerHTML = "Your estimated daily calorie intake: " + baseCalories.toFixed(2) + " calories";
         }
     </script>
 </head>
 <body>
-    <h1>Calorie Intake Calculator</h1>
+    <h1>Workout Plan Generator</h1>
     <form>
-        <label for="activityLevel">Select your activity level:</label>
-        <select id="activityLevel">
-            <option value="inactive">Inactive</option>
-            <option value="active">Active</option>
-            <option value="veryactive">Very Active</option>
+        <label for="goal">Select your goal:</label>
+        <select id="goal">
+            <option value="weightloss">Weight Loss</option>
+            <option value="musclegain">Muscle Gain</option>
+            <option value="maintenance">Maintenance</option>
         </select>
         <br>
-        <button type="button" onclick="calculateCalories()">Calculate</button>
+        <button type="button" onclick="calculateWorkout()">Generate Workout</button>
     </form>
-    <p id="caloriesOutput"></p>
+    <div id="workoutOutput"></div>
+
     <a href="goal.html">
       <button>SUBMIT</button>
     </a>

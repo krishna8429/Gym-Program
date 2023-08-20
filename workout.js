@@ -1,37 +1,46 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const goal = localStorage.getItem('selectedGoal');
-    const workoutPlanElement = document.getElementById('workoutPlan');
+function generateWorkout(goal) {
+    var workoutOutput = document.getElementById("workoutOutput");
+    workoutOutput.innerHTML = "";
 
-    if (goal === 'weightLoss') {
-        workoutPlanElement.innerHTML = `
-            <h2>Weight Loss Workout Plan</h2>
-            <p>Cardiovascular exercises:</p>
-            <ul>
-                <li>30 minutes of brisk walking or jogging</li>
-                <li>20 minutes of cycling</li>
-            </ul>
-            <p>Strength training:</p>
-            <ul>
-                <li>3 sets of push-ups</li>
-                <li>3 sets of squats</li>
-                <li>3 sets of lunges</li>
-            </ul>
-        `;
-    } else if (goal === 'muscleGain') {
-        workoutPlanElement.innerHTML = `
-            <h2>Muscle Gain Workout Plan</h2>
-            <p>Strength training:</p>
-            <ul>
-                <li>3 sets of bench press</li>
-                <li>3 sets of squats</li>
-                <li>3 sets of deadlifts</li>
-            </ul>
-            <p>Isolation exercises:</p>
-            <ul>
-                <li>3 sets of bicep curls</li>
-                <li>3 sets of tricep dips</li>
-                <li>3 sets of leg curls</li>
-            </ul>
-        `;
+    var workoutPlan = {};
+
+    if (goal === "weightloss") {
+        workoutPlan = {
+            day1: "Cardio and Full Body Strength Training",
+            day2: "Rest",
+            day3: "Cardio and Lower Body Strength Training",
+            day4: "Rest",
+            day5: "Cardio and Upper Body Strength Training",
+            day6: "Rest",
+            day7: "Active Rest (Light Stretching)"
+        };
+    } else if (goal === "musclegain") {
+        workoutPlan = {
+            day1: "Upper Body Strength Training",
+            day2: "Rest",
+            day3: "Lower Body Strength Training",
+            day4: "Rest",
+            day5: "Full Body Strength Training",
+            day6: "Rest",
+            day7: "Active Rest (Yoga or Mobility)"
+        };
+    } else if (goal === "maintenance") {
+        workoutPlan = {
+            day1: "Full Body Strength Training",
+            day2: "Cardio",
+            day3: "Upper Body Strength Training",
+            day4: "Rest",
+            day5: "Lower Body Strength Training",
+            day6: "Cardio",
+            day7: "Active Rest (Light Activity)"
+        };
     }
-});
+
+    var workoutTable = "<table><tr><th>Day</th><th>Workout</th></tr>";
+    for (var day in workoutPlan) {
+        workoutTable += "<tr><td>" + day + "</td><td>" + workoutPlan[day] + "</td></tr>";
+    }
+    workoutTable += "</table>";
+
+    workoutOutput.innerHTML = workoutTable;
+}
