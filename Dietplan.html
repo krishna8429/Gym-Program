@@ -8,14 +8,17 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-         } 
+            
+            /* Background styles */
+            background: url('both.jpg');
+            background-size: cover;
+        } 
         
         .container {
             background-color: white;
@@ -39,51 +42,18 @@
         } 
     </style>
 </head>
-<!-- <body> -->
-    <!-- <div class="container"> -->
-        <!-- <h1>Diet Plan</h1> -->
-        <!-- <div class="diet-plan" id="dietPlan"> -->
-            <!-- Diet plan table will be inserted here -->
-        <!-- </div> -->
-    <!-- </div> -->
-    <body>
-        <div class="container">
-            <h1>Diet Plan</h1>
-            <table>
-                <tr>
-                    <th>Meal</th>
-                    <th>Food</th>
-                    <th>Portion Size</th>
-                </tr>
-                <tr>
-                    <td>Breakfast</td>
-                    <td>Oatmeal with fruits</td>
-                    <td>1 bowl</td>
-                </tr>
-                <tr>
-                    <td>Snack</td>
-                    <td>Mixed nuts</td>
-                    <td>Handful</td>
-                </tr>
-                <tr>
-                    <td>Lunch</td>
-                    <td>Brown rice with vegetables</td>
-                    <td>1 plate</td>
-                </tr>
-                <tr>
-                    <td>Snack</td>
-                    <td>Greek yogurt</td>
-                    <td>1 serving</td>
-                </tr>
-                <tr>
-                    <td>Dinner</td>
-                    <td>Chickpea salad</td>
-                    <td>1 bowl</td>
-                </tr>
-            </table>
-        </div>
-    </body>
-    </html>
+<body>
+    <div class="container">
+        <h1>Diet Plan</h1>
+        <table>
+            <tr>
+                <th>Meal</th>
+                <th>Food</th>
+                <th>Portion Size</th>
+            </tr>
+            <!-- Diet plan rows here -->
+        </table>
+    </div>
     <script src="dietplan.js"></script>
 </body>
 </html>
