@@ -3,43 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dietplan.css">
     <title>Diet Plan</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            
-            /* Background styles */
-            background: url('both.jpg');
-            background-size: cover;
-        } 
+        /* ... (existing styles) ... */
         
-        .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+        /* Additional styles for diet plan */
+        .veg-meals {
+            background-color: #4CAF50; /* Green color */
+            color: white;
         }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            border: 1px solid #ccc;
-            margin-top: 20px;
+
+        .non-veg-meals {
+            background-color: #FF5722; /* Orange color */
+            color: white;
         }
-        
-        th, td {
+
+        /* Add spacing between meal categories */
+        .meal-category {
+            background-color: #333;
+            color: white;
             padding: 8px;
             text-align: center;
-            border: 1px solid #ccc;
-        } 
+        }
     </style>
 </head>
 <body>
@@ -51,7 +37,158 @@
                 <th>Food</th>
                 <th>Portion Size</th>
             </tr>
-            <!-- Diet plan rows here -->
+            <tr class="meal-category">
+                <td colspan="3">Breakfast</td>
+            </tr>
+            <tr class="veg-meals">
+                <td rowspan="3">Veg Meal 1</td>
+                <td>Scrambled Tofu</td>
+                <td>1 cup</td>
+            </tr>
+            <tr class="veg-meals">
+                <td>Whole Grain Bread</td>
+                <td>2 slices</td>
+            </tr>
+            <tr class="veg-meals">
+                <td>Fruits</td>
+                <td>1 serving</td>
+            </tr>
+            <tr class="non-veg-meals">
+                <td rowspan="3">Non-Veg Meal 1</td>
+                <td>Boiled Eggs</td>
+                <td>2 eggs</td>
+            </tr>
+            <tr class="non-veg-meals">
+                <td>Whole Wheat Toast</td>
+                <td>2 slices</td>
+            </tr>
+            <tr class="non-veg-meals">
+                <td>Fruits</td>
+                <td>1 serving</td>
+            </tr>
+            <!-- Add more meals here -->
+            <tr class="meal-category">
+                <td colspan="3">Lunch</td>
+            </tr>
+            <tr class="veg-meals">
+                <td rowspan="3">Veg Meal 2</td>
+                <td>Chickpea Salad</td>
+                <td>1 bowl</td>
+            </tr>
+            <tr class="veg-meals">
+                <td>Brown Rice</td>
+                <td>1 cup</td>
+            </tr>
+            <tr class="veg-meals">
+                <td>Vegetables</td>
+                <td>1 serving</td>
+            </tr>
+            <tr class="non-veg-meals">
+                <td rowspan="3">Non-Veg Meal 2</td>
+                <td>Grilled Salmon</td>
+                <td>4 oz</td>
+            </tr>
+            <tr class="non-veg-meals">
+                <td>Quinoa</td>
+                <td>1 cup</td>
+            </tr>
+            <tr class="non-veg-meals">
+                <td>Vegetables</td>
+                <td>1 serving</td>
+            </tr>
+            <!-- Repeat the pattern for other meals -->
+            <tr class="meal-category">
+                <td colspan="3">Snacks</td>
+            </tr>
+            <tr class="veg-meals">
+                <td rowspan="3">Veg Meal 3</td>
+                <td>Hummus and Veggies</td>
+                <td>1 serving</td>
+            </tr>
+            <tr class="veg-meals">
+                <td>Fruits</td>
+                <td>1 serving</td>
+            </tr>
+            <tr class="veg-meals">
+                <td>Nuts</td>
+                <td>Handful</td>
+            </tr>
+            <tr class="non-veg-meals">
+                <td rowspan="3">Non-Veg Meal 3</td>
+                <td>Greek Yogurt with Berries</td>
+                <td>1 serving</td>
+            </tr>
+            <tr class="non-veg-meals">
+                <td>Protein Shake</td>
+                <td>1 serving</td>
+            </tr>
+            <tr class="non-veg-meals">
+                <td>Boiled Eggs</td>
+                <td>2 eggs</td>
+            </tr>
+            <!-- ... (previous code) ... -->
+            <!-- Repeat the pattern for other meals -->
+            <tr class="meal-category">
+                <td colspan="3">Post-Workout</td>
+            </tr>
+            <tr class="veg-meals">
+                <td rowspan="3">Veg Meal 4</td>
+                <td>Protein Smoothie</td>
+                <td>1 serving</td>
+            </tr>
+            <tr class="veg-meals">
+                <td>Rice Cakes with Peanut Butter</td>
+                <td>2 cakes</td>
+            </tr>
+            <tr class="veg-meals">
+                <td>Fruits</td>
+                <td>1 serving</td>
+            </tr>
+            <tr class="non-veg-meals">
+                <td rowspan="3">Non-Veg Meal 4</td>
+                <td>Grilled Chicken Breast</td>
+                <td>4 oz</td>
+            </tr>
+            <tr class="non-veg-meals">
+                <td>Whole Wheat Bread</td>
+                <td>2 slices</td>
+            </tr>
+            <tr class="non-veg-meals">
+                <td>Fruits</td>
+                <td>1 serving</td>
+            </tr>
+            <!-- Repeat the pattern for other meals -->
+            <tr class="meal-category">
+                <td colspan="3">Dinner</td>
+            </tr>
+            <tr class="veg-meals">
+                <td rowspan="3">Veg Meal 5</td>
+                <td>Vegetable Stir-Fry</td>
+                <td>1 serving</td>
+            </tr>
+            <tr class="veg-meals">
+                <td>Quinoa</td>
+                <td>1 cup</td>
+            </tr>
+            <tr class="veg-meals">
+                <td>Salad</td>
+                <td>1 serving</td>
+            </tr>
+            <tr class="non-veg-meals">
+                <td rowspan="3">Non-Veg Meal 5</td>
+                <td>Salmon Fillet</td>
+                <td>4 oz</td>
+            </tr>
+            <tr class="non-veg-meals">
+                <td>Steamed Broccoli</td>
+                <td>1 serving</td>
+            </tr>
+            <tr class="non-veg-meals">
+                <td>Brown Rice</td>
+                <td>1 cup</td>
+            </tr>
+            <!-- Repeat the pattern for other meals -->
+            <!-- Add more meals here -->
         </table>
     </div>
     <script src="dietplan.js"></script>
