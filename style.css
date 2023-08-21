@@ -1,11 +1,11 @@
 /* Apply a consistent color scheme */
 :root {
-  --primary-color: #007bff; /* Blue */
-  --secondary-color: #555; /* Gray */
+  --primary-color: #007bff; Blue
+  --secondary-color: #555; Gray
   --background-color: #f0f0f0;
   --background-translucent: rgba(255, 255, 255, 0.95);
   --light-gray: #f9f9f9;
-  --accent-color: #d8af28; /* Gold */
+  --accent-color: #d8af28; Gold
 }
 
 /* Reset default styles */
@@ -80,10 +80,11 @@ button:focus {
 
 /* Set a beautiful background image with an overlay */
 body {
-  background: url('background-image.jpg') no-repeat center center fixed,
-              var(--accent-color);
+  background: url('both.jpg');
+   /* no-repeat center center fixed, */
+              /* var(--accent-color); */
   background-size: cover;
-  background-blend-mode: overlay;
+  /* background-blend-mode: overlay; */
 }
 
   
