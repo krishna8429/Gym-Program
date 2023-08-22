@@ -22,7 +22,7 @@
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            margin: 20px auto;
+            margin: 0px auto;
             max-width: 400px;
         }
 
@@ -40,6 +40,14 @@
             font-size: 25px;
 
         }
+        .result-container {
+        background-color: navajowhite;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 0px auto; /* Adjusted margin value */
+        max-width: 400px;
+    }
     </style>
     <!-- <script> -->
         <!-- // function calculateWorkout() { -->
@@ -90,7 +98,9 @@
 
 
     <form id="goal-form">
-        <label for="goal">Select Your Goal:</label>
+        <label for="goal" style="color: #007bff; font-size: 20px;">Select Your Goal:</label>
+
+        <!-- <label for="goal">Select Your Goal:</label> -->
         <select id="goal" required>
             <option value="weightloss">Muscle Building</option>
             <option value="muscleBuilding">Weight Loss</option>
