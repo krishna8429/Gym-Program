@@ -1,0 +1,102 @@
+/* Apply a consistent color scheme */
+:root {
+    --primary-color: #007bff; Blue
+    --secondary-color: #555; Gray
+    --background-color: #f0f0f0;
+    --background-translucent: rgba(255, 255, 255, 0.95);
+    --light-gray: #f9f9f9;
+    --accent-color: #d8af28; Gold
+  }
+  
+  /* Reset default styles */
+  body, h1 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Apply background color and font styles */
+  body {
+    font-family: Arial, sans-serif;
+    background: var(--background-color);
+  }
+  
+  /* Create a centered container */
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: var(--background-translucent);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style headings */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+  }
+  
+  /* Style form elements */
+  form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 5px;
+    /* color: var(--secondary-color); */
+  }
+  
+  input[type="number"],
+  select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: var(--light-gray);
+  }
+  
+  button {
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  /* Set a beautiful background image with an overlay */
+  body {
+    background: url('both.jpg');
+     /* no-repeat center center fixed, */
+                /* var(--accent-color); */
+    background-size: cover;
+    /* background-blend-mode: overlay; */
+  }
+  input, select {
+    color: green; /* Change to the desired text color */
+    font-size: 14px; /* Change to the desired font size */
+  }
+  
+  /* Adjust the width of the select box */
+  #goal {
+    width: 500px; /* Adjust the width as needed */
+  }
+  /* Add this code to your styles.css file */
+  
+  

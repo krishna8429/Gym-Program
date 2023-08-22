@@ -103,4 +103,8 @@ input, select {
   width: 500px; /* Adjust the width as needed */
 }
 /* Add this code to your styles.css file */
-
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: red;
+}
