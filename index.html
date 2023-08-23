@@ -11,14 +11,89 @@
         }
     </script>
     <style type="text/css">
-      div{
+body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            /* margin: 0;
+            /* padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('both.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center; */ 
+        }
+        .footer {
+          text-align: right;
+            background-image: url('6312962.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 50px 0;
+    /* background-color: #333; */
+    color: #fff;
+    /* padding: 40px 0; */
+    /* text-align: center; */
+    /* border : 3px solid red; */
+    /* height: 10px; */
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer li {
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 16px;
+}
+
+.footer a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgb(230, 7, 7);
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover {
+    color: #f2f2f2;
+}
+
+       .container{
         height : 700px;
         border : 3px solid red;
         background: url('both.jpg');
       }
+      div{
+        top: 0%;
+        /* height : 100px; */
+        /* border : 3px solid red; */
+        /* background: url('both.jpg'); */
+      }
+      
+
+    
     </style>
 </head>
 <body>
+  
+<div class="footer">
+    <ul>
+        <li><a href="address.html">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Address</a></li>
+    </ul>
+</div>
+
+  
+  
+  
     <div class="container">
         <img src="image.png" alt="Logo" width="250px" height="190px" class="logo">
         <br><br><br>
@@ -47,39 +122,14 @@
                 <option value="moderatelyActive">Moderately Active</option>
                 <option value="veryActive">Very Active</option>
                 <option value="superActive">Super Active</option>
-            <!-- <select id="activity" name="activity" required>
-                <option value="not-active">Not Active</option>
-                <option value="active">Active</option>
-                <option value="very-active">Very Active</option> -->
+           
             </select><br>
            <a href="calculate.html">
            <button type="button" id="calculate-button">Calculate</button></a>
             </form>
           </div>
+        
           
-        <script>
-        //   document.getElementById("calculate-button").addEventListener("click", function() {
-        //       const age = document.getElementById("age").value;
-        //       const height = document.getElementById("height").value;
-        //       const weight = document.getElementById("weight").value;
-        //       const gender = document.getElementById("gender").value;
-        //       const activity = document.getElementById("activity").value;
-  
-        //        // Store data in cookies
-        // document.cookie = `age=${age};`;
-        // document.cookie = `height=${height};`;
-        // document.cookie = `weight=${weight};`;
-        // document.cookie = `gender=${gender};`;
-        // document.cookie = `activity=${activity};`;
-
-        //  Redirect to calculate.html
-        // window.location.href = "calculate.html";
-   
-              // Redirect to calculate.html
-              // window.location.href = "calculate.html";
-              // window.location.href = `calculate.html?age=${age}&height=${height}&weight=${weight}&gender=${gender}&activity=${activity}`;
-          // }); 
-      </script>
       <script src="script.js"></script>
   </body>
   </html>

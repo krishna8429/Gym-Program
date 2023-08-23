@@ -49,44 +49,11 @@
         max-width: 400px;
     }
     </style>
-    <!-- <script> -->
-        <!-- // function calculateWorkout() { -->
-            <!-- // var goal = document.getElementById("goal").value;
-            
-            // if (goal === "weightloss") {
-                // generateWorkout("weightloss");
-            // } else if (goal === "musclegain") {
-                generateWorkout("musclegain");
-            // } else if (goal === "maintenance") {
-                // generateWorkout("maintenance"); -->
-            <!-- // } -->
-        <!-- // } -->
-    <!-- </script> -->
 </head>
 <body>
     <br><br>
     <h1>Workout Plan By MAXFIT</h1>
-    <!-- <br><br><br><br><br><br>
-    <h3>Hello Dear, Your daily calories intake is :<br>
-         We have Prepared a Workout And a Diet Plan According To Your Goals, So select ONE 
-    </h3>
-    <form>
-        <label for="goal">TELL US ABOUT YOUR GOAL:</label>
-        <select id="goal">
-            <option value="weightloss">Weight Loss</option>
-            <option value="musclegain">Muscle Gain</option>
-            <option value="maintenance">Maintenance</option>
-        </select>
-        <br> -->
-        <!-- <a href="goal.html">
-        <button type="button"> Generate Workout</button>
-        </a>
-    </form> -->
-    <!-- <div id="workoutOutput"></div> -->
 
-     <!-- <a href="goal.html">  -->
-      <!-- <button>SUBMIT</button> -->
-    <!-- </a> -->
     <div class="result-container">
         <h2>Calorie Calculator - Results</h2>
         <p class="result-text">Your calculated daily calorie intake:</p>
@@ -122,51 +89,6 @@
             }
         });
     </script>
-    <!-- <div id="calories-display"></div>
-
-    <script>
-        document.getElementById("generate-button").addEventListener("click", function() {
-            // Read cookies to retrieve user data
-            const cookies = document.cookie.split('; ');
-            let userData = {};
-            cookies.forEach(cookie => {
-                const [key, value] = cookie.split('=');
-                userData[key] = value;
-            });
-
-            const age = parseInt(userData.age);
-            const height = parseFloat(userData.height);
-            const weight = parseFloat(userData.weight);
-            const gender = userData.gender;
-            const activity = userData.activity;
-
-            const goalSelect = document.getElementById("goal");
-            const goal = goalSelect.options[goalSelect.selectedIndex].value;
-
-
-            
-            // Calculate daily calorie intake based on formula (you can replace this with a suitable formula)
-            let calories = 0;
-            if (gender === "male") {
-                calories = 10 * weight + 6.25 * height - 5 * age + 5;
-            } else if (gender === "female") {
-                calories = 10 * weight + 6.25 * height - 5 * age - 161;
-            }
-
-            // Adjust calories based on activity level
-            if (activity === "sedentary") {
-                calories *= 1.2;
-            } else if (activity === "moderate") {
-                calories *= 1.55;
-            } else if (activity === "active") {
-                calories *= 1.725;
-            }
-
-            // Display calculated calories
-            const caloriesDisplay = document.getElementById("calories-display");
-        caloriesDisplay.innerHTML = `Your daily calorie intake for ${goal} goal is: ${calories.toFixed(2)} calories`;
-        });
-    </script> -->
 </body>
 </html>
 
